@@ -66,7 +66,7 @@ SLiM | Rofi Menu
 - Openbox keybindings can be seen in _~/.config/openbox/rc.xml_ or right-click on desktop
 - I3wm keybindings can be seen in _~/.config/i3/config_
 - Between each window manager, I've synchronize the some theme (ex:rofi,neofetch-image) using the `sed` command. To check, modify, or delete at startup each wm [openbox](https://github.com/owl4ce/HZLabs/blob/master/.config/openbox/autostart), [i3wm](https://github.com/owl4ce/HZLabs/blob/master/.config/i3/autostart)
-- Because using a normal user, for brightnessctl requires user privileges to be a superuser without the sudo command but using [this](https://unix.stackexchange.com/questions/79692/running-program-as-root-without-using-sudo-with-normal-user-account) or [removes the password question](https://askubuntu.com/questions/246146/how-can-i-permanently-grant-root-access-to-a-user) from sudo
+- Because using a normal user, for brightnessctl requires user privileges to be a superuser without the sudo command but using [this](https://unix.stackexchange.com/questions/79692/running-program-as-root-without-using-sudo-with-normal-user-account) or [udev rules](https://wiki.archlinux.org/index.php/backlight)
 - The QT theme is synchronized with the GTK Theme. Read [this](https://wiki.archlinux.org/index.php/Qt#GTK_and_Qt) for guide
 - Some Polybar modules may not work for example battery and my WiFi network interface is _wlan0_ you might have to change it if it's different in _~/.config/polybar/config_
 - Rofi uses [rofi-menu](https://gitlab.com/vahnrr/rofi-menus) which I adjusted myself in [this](https://github.com/owl4ce/HZLabs/tree/master/.config/rofi)
