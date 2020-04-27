@@ -1,0 +1,9 @@
+[Desktop Entry]
+Comment=Play music on NCMPCPP Slaved Screen with Album Art
+Terminal=false
+Name=NCMPCPP Slave Album Art
+Categories=AudioVideo;Audio;Player;
+Exec=bash -c "~/.ncmpcpp/open/ncmpcpp-album-slave"
+Type=Application
+Icon=mpd
+

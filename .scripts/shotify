@@ -1,0 +1,12 @@
+#!/bin/bash
+
+# Screenshot 5s with notification
+
+# 3s before capture
+sleep 3s && notify-send -i ~/.scripts/frame.png -u low "Screenshot" "Taking shot in 5.. 4.. 3.. 2.." &
+
+# Take screenshot
+scrot -d 5 -e 'mv $f ~/Pictures/'
+
+# Completions
+sleep 1s && notify-send -i ~/.scripts/frame.png -u low "Screenshot" "Saved in\n<u>`pwd`/Pictures/</u>"

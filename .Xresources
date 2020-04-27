@@ -1,0 +1,102 @@
+! X Resources
+!
+! --------------------------------------------------------
+! https://github.com/owl4ce/HZlabs
+
+!#! URXVT APPEARANCE
+URxvt.font:                       xft:mplus nerd font mono:size=9
+URxvt.geometry:                   86x16
+URxvt.internalBorder:             20
+URxvt.cursorBlink:                true
+URxvt.cursorUnderline:            true
+URxvt.saveline:                   8192
+URxvt.scrollBar:                  false
+URxvt.scrollBar_right:            true
+URxvt.scrollBar_floating:         false
+URxvt.scrollstyle:                plain
+URxvt.urgentOnBell:               false
+URxvt.depth:                      24
+URxvt.iso14755:                   false
+
+!#! EXTENSION & OTHERS
+URxvt.perl-ext-common:            default,clipboard,keyboard-select,url-select,tabbedex
+URxvt.tabbedex.new-button:        false
+URXvt.tabbedex.reopen-on-close:   yes
+URxvt.tabbedex.autohide:          true
+URxvt.tabbedex.tabbar-fg:         1
+URxvt.tabbedex.tabbar-bg:         0
+URxvt.tabbedex.tab-fg:            0
+URxvt.tabbedex.tab-bg:            1
+URxvt.keysym.Control-Shift-T:     perl:tabbedex:new_tab
+URxvt.keysym.Control-Shift-R:     perl:tabbedex:rename_tab
+URxvt.keysym.Control-Shift-W:     perl:tabbedex:kill_tab
+URxvt.keysym.Control-Next:        perl:tabbedex:next_tab
+URxvt.keysym.Control-Prior:       perl:tabbedex:prev_tab
+
+URxvt.clipboard.copycmd:          xclip -i -selection clipboard
+URxvt.clipboard.pastecmd:         xclip -o -selection clipboard
+URxvt.keysym.M-c:                 perl:clipboard:copy
+URxvt.keysym.M-v:                 perl:clipboard:paste
+URxvt.keysym.M-Escape:            perl:keyboard-select:activate
+URxvt.keysym.M-s:                 perl:keyboard-select:search
+URxvt.urlLauncher:                google-chrome-stable
+URxvt.underlineURLs:              true
+URxvt.urlButton:                  1
+
+!#! COLOR SCHEME [NORD]
+#define nord0 #2E3440
+#define nord1 #3B4252
+#define nord2 #434C5E
+#define nord3 #4C566A
+#define nord4 #D8DEE9
+#define nord5 #E5E9F0
+#define nord6 #ECEFF4
+#define nord7 #8FBCBB
+#define nord8 #88C0D0
+#define nord9 #81A1C1
+#define nord10 #5E81AC
+#define nord11 #BF616A
+#define nord12 #D08770
+#define nord13 #EBCB8B
+#define nord14 #A3BE8C
+#define nord15 #B48EAD
+
+*.foreground:   nord4
+*.background:   nord0
+*.cursorColor:  nord4
+!*fading: 35
+!*fadeColor: nord3
+
+! BLACK
+*.color0: nord1
+! RED
+*.color1: nord11
+! GREEN
+*.color2: nord14
+! YELLOW
+*.color3: nord13
+! BLUE
+*.color4: nord9
+! MAGENTA
+*.color5: nord15
+! CYAN
+*.color6: nord8
+! WHITE
+*.color7: nord5
+
+! BLACK
+*.color8: nord3
+! RED
+*.color9: nord11
+! GREEN
+*.color10: nord14
+! YELLOW
+*.color11: nord13
+! BLUE
+*.color12: nord9
+! MAGENTA
+*.color13: nord15
+! CYAN
+*.color14: nord7
+! WHITE
+*.color15: nord6

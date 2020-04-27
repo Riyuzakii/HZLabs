@@ -1,0 +1,39 @@
+#!/bin/bash
+#
+# Add ' & ' symbol on the bottom of the command for faster load (background job)
+# ---
+
+# Panel/Bar
+polybar -r i3 &
+
+# Background Handler
+nitrogen --set-zoom-fill --save ~/.wallpaper/night-city-darker.jpg &
+
+# Compositor
+picom -b &
+
+# Notification
+dunst  &
+
+# Power Manager
+xfce4-power-manager &
+
+# Policy Kit
+/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
+
+# Lock Screen Handler
+xss-lock -- /usr/bin/slimlock &
+
+# Tray/Applets
+clipit &
+#nm-applet &
+#blueman-applet &
+
+# Apps & Others (ex:music)
+mpd &
+
+# Sync Theme
+# rofi-menu
+sed -i 's\pink\blue\' ~/.config/rofi/themes/shared/settings.rasi
+# neofetch
+sed -i 's\hzlabs.png\hzlabs-city.png\' ~/.config/neofetch/config.conf

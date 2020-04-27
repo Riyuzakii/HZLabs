@@ -1,0 +1,8 @@
+[Desktop Entry]
+Comment=QT Pulseaudio Equalizer
+Terminal=false
+Name=Pulseaudio Equalizer (qpaeq)
+Categories=AudioVideo;Audio;Player;
+Exec=qpaeq
+Type=Application
+Icon=kmix

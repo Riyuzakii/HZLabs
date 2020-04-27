@@ -1,0 +1,250 @@
+# i3 config - Minimal
+#
+# --------------------------------------------------------
+# https://github.com/owl4ce/HZlabs
+
+# Fonts
+font xft:Iosevka 8
+
+# Orientation for new workspaces
+default_orientation auto
+
+# Layout mode for new containers
+workspace_layout default
+
+# Window title alignment
+title_align center
+
+# Default border style for new windows
+default_border pixel 1
+default_floating_border pixel1
+
+# Hiding borders adjacent to the screen edges
+hide_edge_borders both
+focus_follows_mouse yes
+popup_during_fullscreen smart
+
+# Arbitrary commands for specific windows (for_window)
+for_window [urgent=latest] focus
+
+for_window [title="alsamixer"] floating enable border pixel 1
+for_window [title="File Transfer*"] floating enable border pixel 1
+for_window [class="Galculator"] floating enable border pixel 1
+for_window [class="GParted"] floating enable border pixel 1
+for_window [title="i3_help"] floating enable sticky enable border pixel 1
+for_window [class="Lxappearance"] floating enable sticky enable border pixel 1
+for_window [class="Nitrogen"] floating enable sticky enable border pixel 1
+for_window [class="Pavucontrol"] floating enable border pixel 1
+for_window [class="qt5ct"] floating enable sticky enable border pixel 1
+for_window [class="(?i)virtualbox"] floating enable border pixel 1
+for_window [class="BleachBit"] floating enable border pixel 1
+for_window [class="stacer"] floating enable border pixel 1
+for_window [class="qpaeq"] floating enable border pixel 1
+for_window [class="Viewnior"] floating enable border pixel 1
+for_window [class="Gpick"] floating enable border pixel 1
+for_window [class="File-roller"] floating enable border pixel 1
+for_window [class="SimpleScreenRecorder"] floating enable border pixel 1
+for_window [class="Audacious"] floating enable border pixel 1
+for_window [class="bomi"] layout tabbed
+
+# Automatically starting applications on i3 startup
+exec --no-startup-id bash -c '~/.config/i3/autostart'
+
+# Theme colors
+#                 <border> <background> <text> <indicator> <child_border>
+client.focused          #81a1c1 #81a1c1 #434c5e #fff6f6 #81a1c1
+client.focused_inactive #434c5e #434c5e #fff6f6 #fff6f6 #434c5e
+client.unfocused        #434c5e #434c5e #fff6f6 #fff6f6 #434c5e
+client.urgent           #b48ead #b48ead #fff6f6 #fff6f6 #b48ead
+client.placeholder      #000000 #2e3440 #fff6f6 #000000 #2e3440
+
+client.background       #81a1c1
+
+# Focus follows mouse
+focus_follows_mouse yes
+
+# Popups during fullscreen mode
+popup_during_fullscreen smart
+
+# Modifier key (use super/Mod4)
+set $mod Mod4
+floating_modifier $mod
+
+# Workspace back and forth
+workspace_auto_back_and_forth yes
+bindsym $mod+b workspace back_and_forth
+bindsym $mod+Shift+b move container to workspace back_and_forth; workspace back_and_forth
+
+# Kill containers
+bindsym $mod+c kill
+
+# Splitting containers
+bindsym $mod+v split v ; exec notify-send -u low -i dialog-information "New Container Tile" "Vertically"
+bindsym $mod+h split h ; exec notify-send -u low -i dialog-information "New Container Tile" "Horizontally"
+bindsym $mod+q split toggle ; exec notify-send -i dialog-information "New Container Tile" "Toggled"
+
+# Manipulating layout
+bindsym $mod+s layout stacking
+bindsym $mod+e layout toggle split
+bindsym $mod+w layout tabbed
+
+bindsym $mod+f fullscreen toggle
+bindsym $mod+x floating toggle
+
+# Focusing containers
+bindsym $mod+Left focus left
+bindsym $mod+Down focus down
+bindsym $mod+Up focus up
+bindsym $mod+Right focus right
+
+bindsym $mod+a focus parent
+bindsym $mod+z focus mode_toggle
+
+# Moving containers
+bindsym $mod+Shift+Left move left
+bindsym $mod+Shift+Down move down
+bindsym $mod+Shift+Up move up
+bindsym $mod+Shift+Right move right
+
+# Sticky floating windows
+bindsym $mod+Shift+s sticky toggle
+
+# Navigate workspaces next / previous
+bindsym $mod+Ctrl+Right workspace next
+bindsym $mod+Ctrl+Left workspace prev
+
+# Media control
+bindsym XF86MonBrightnessUp exec --no-startup-id brightnessctl set 5%+
+bindsym XF86MonBrightnessDown exec --no-startup-id brightnessctl set 5%-
+
+bindsym XF86AudioRaiseVolume exec --no-startup-id pamixer -i 5
+bindsym XF86AudioLowerVolume exec --no-startup-id pamixer -d 5
+
+bindsym XF86AudioMute exec --no-startup-id pamixer -t
+bindsym XF86AudioStop exec --no-startup-id mpc stop
+bindsym XF86AudioPlay exec --no-startup-id mpc toggle
+bindsym XF86AudioPrev exec --no-startup-id mpc prev
+bindsym XF86AudioNext exec --no-startup-id mpc next
+bindsym Insert exec --no-startup-id bash -c '~/.scripts/mpd-single'
+
+bindsym Print exec --no-startup-id scrot -e 'mv $f ~/Pictures/'
+
+# Program launcher
+bindsym $mod+Return exec i3-sensible-terminal
+
+bindsym $mod+r exec --no-startup-id bash -c '~/.config/rofi/scripts/appsmenu.sh'
+bindsym $mod+l exec slimlock
+
+bindsym $mod+Home exec thunar
+bindsym $mod+F12 exec --no-startup-id networkmanager_dmenu
+bindsym $mod+Insert exec --no-startup-id bash -c '~/.config/rofi/scripts/mpdmenu.sh'
+bindsym $mod+Print exec --no-startup-id bash -c '~/.config/rofi/scripts/scrotmenu.sh'
+
+# Workspaces
+set $ws1 1
+set $ws2 2
+set $ws3 3
+set $ws4 4
+set $ws5 5
+set $ws6 6
+set $ws7 7
+set $ws8 8
+
+# Switch to workspace
+bindsym $mod+1 workspace $ws1
+bindsym $mod+2 workspace $ws2
+bindsym $mod+3 workspace $ws3
+bindsym $mod+4 workspace $ws4
+bindsym $mod+5 workspace $ws5
+bindsym $mod+6 workspace $ws6
+bindsym $mod+7 workspace $ws7
+bindsym $mod+8 workspace $ws8
+
+# Move focused container to workspace
+bindsym $mod+Ctrl+1 move container to workspace $ws1
+bindsym $mod+Ctrl+2 move container to workspace $ws2
+bindsym $mod+Ctrl+3 move container to workspace $ws3
+bindsym $mod+Ctrl+4 move container to workspace $ws4
+bindsym $mod+Ctrl+5 move container to workspace $ws5
+bindsym $mod+Ctrl+6 move container to workspace $ws6
+bindsym $mod+Ctrl+7 move container to workspace $ws7
+bindsym $mod+Ctrl+8 move container to workspace $ws8
+
+# Move to workspace with focused container
+bindsym $mod+Shift+1 move container to workspace $ws1; workspace $ws1
+bindsym $mod+Shift+2 move container to workspace $ws2; workspace $ws2
+bindsym $mod+Shift+3 move container to workspace $ws3; workspace $ws3
+bindsym $mod+Shift+4 move container to workspace $ws4; workspace $ws4
+bindsym $mod+Shift+5 move container to workspace $ws5; workspace $ws5
+bindsym $mod+Shift+6 move container to workspace $ws6; workspace $ws6
+bindsym $mod+Shift+7 move container to workspace $ws7; workspace $ws7
+bindsym $mod+Shift+8 move container to workspace $ws8; workspace $ws8
+
+# Resizing containers/windows (use alt/Mod1)
+bindsym Mod1+r mode "resize"
+mode "resize" {
+        bindsym Left resize shrink width 5 px or 5 ppt
+        bindsym Down resize grow height 5 px or 5 ppt
+        bindsym Up resize shrink height 5 px or 5 ppt
+        bindsym Right resize grow width 5 px or 5 ppt
+
+        bindsym Return mode "default"
+        bindsym Escape mode "default"
+}
+
+# Changing border style
+bindsym $mod+u border none
+bindsym $mod+y border pixel 1
+bindsym $mod+n border normal
+
+# Reloading/Restarting/Exiting
+bindsym $mod+Shift+r restart
+#bindsym $mod+Shift+w reload
+#bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
+bindsym $mod+Shift+e exec bash -c '~/.config/rofi/scripts/powermenu.sh'
+
+# Scratchpad
+bindsym $mod+Shift+minus move scratchpad
+bindsym $mod+minus scratchpad show
+
+# Gaps
+gaps inner 10
+gaps outer 0
+
+smart_gaps on
+
+set $mode_gaps Gaps: [O]uter, [I]nner
+set $mode_gaps_outer Outer Gaps: +|-|0 (local) / Shift +|-|0 (global)
+set $mode_gaps_inner Inner Gaps: +|-|0 (local) / Shift +|-|0 (global)
+bindsym $mod+Shift+g mode "$mode_gaps"
+
+mode "$mode_gaps" {
+        bindsym o      mode "$mode_gaps_outer"
+        bindsym i      mode "$mode_gaps_inner"
+        bindsym Return mode "default"
+        bindsym Escape mode "default"
+}
+mode "$mode_gaps_inner" {
+        bindsym plus  gaps inner current plus 5
+        bindsym minus gaps inner current minus 5
+        bindsym 0     gaps inner current set 0
+
+        bindsym Shift+plus  gaps inner all plus 5
+        bindsym Shift+minus gaps inner all minus 5
+        bindsym Shift+0     gaps inner all set 0
+
+        bindsym Return mode "default"
+        bindsym Escape mode "default"
+}
+mode "$mode_gaps_outer" {
+        bindsym plus  gaps outer current plus 5
+        bindsym minus gaps outer current minus 5
+        bindsym 0     gaps outer current set 0
+
+        bindsym Shift+plus  gaps outer all plus 5
+        bindsym Shift+minus gaps outer all minus 5
+        bindsym Shift+0     gaps outer all set 0
+
+        bindsym Return mode "default"
+        bindsym Escape mode "default"
+}
