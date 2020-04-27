@@ -75,7 +75,6 @@ SLiM | Rofi Menu
 - After installing the font you need to refresh the font cache using _fc-cache -r_
 - In my screenshot there is a display to test colors using [Color Scripts](https://github.com/stark/Color-Scripts)
 - To get the appropriate album art size for ncmpcpp, it is recommended that _cover.jpg_ has a ratio of 1:1 (300px+)
-- SLiM Themes in the [Others](https://github.com/owl4ce/HZLabs/tree/master/Others) folder. Read [this](https://wiki.archlinux.org/index.php/SLiM) for more guide
 - I hope you understand about everything here. :wink:
 
 ## Thanks to
