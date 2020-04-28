@@ -194,11 +194,6 @@
         <command>mpc next</command>
       </action>
     </keybind>
-    <keybind key="Insert">
-      <action name="Execute">
-        <command>bash -c '~/.scripts/mpd-single'</command>
-      </action>
-    </keybind>
     <!-- window switching with the arrow keys -->
     <keybind key="W-Right">
       <action name="DirectionalCycleWindows">
@@ -366,7 +361,7 @@
         <command>bash -c '~/.config/rofi/scripts/appsmenu.sh'</command>
       </action>
     </keybind>
-    <keybind key="W-Insert">
+    <keybind key="W-m">
       <action name="Execute">
         <command>bash -c '~/.config/rofi/scripts/mpdmenu.sh'</command>
       </action>

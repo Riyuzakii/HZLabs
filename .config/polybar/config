@@ -73,8 +73,8 @@ format-padding = 1
 format-prefix = ""
 format-prefix-foreground = ${colors.accent-alt}
 
-click-left = bash -c '~/.config/rofi/scripts/appsmenu.sh'
-click-right = bash -c '~/.config/rofi/scripts/powermenu.sh'
+click-left = bash -c '~/.config/rofi/scripts/appsmenu.sh' &
+click-right = bash -c '~/.config/rofi/scripts/powermenu.sh' &
 
 [module/ewmh]
 type = internal/xworkspaces
@@ -200,7 +200,7 @@ interface = wlan0
 format-connected = "<label-connected>"
 ;format-connected-padding = 1
 
-format-connected-suffix = "%{A1:networkmanager_dmenu:}%{A}"
+format-connected-suffix = "%{A1:networkmanager_dmenu &:}%{A}"
 format-connected-suffix-padding = 1
 format-connected-suffix-foreground = ${colors.fg-alt}
 format-connected-suffix-background = ${colors.accent}
@@ -208,7 +208,7 @@ format-connected-suffix-background = ${colors.accent}
 format-disconnected = "<label-disconnected>"
 ;format-disconnected-padding = 1
 
-format-disconnected-suffix = "%{A1:networkmanager_dmenu:}%{A}"
+format-disconnected-suffix = "%{A1:networkmanager_dmenu &:}%{A}"
 format-disconnected-suffix-padding = 1
 format-disconnected-suffix-foreground = ${colors.fg-alt}
 format-disconnected-suffix-background = ${colors.accent}
@@ -261,16 +261,16 @@ label-full-background = ${colors.fg-alt}
 
 [module/vol]
 type = internal/alsa
-format-volume = "<bar-volume>"
+format-volume = "%{A1:bash -c '~/.scripts/get-volume' &:}<bar-volume>%{A}"
 ;format-volume-padding = 1
 
-format-volume-prefix = ""
+format-volume-prefix = "%{A3:pavucontrol &:}%{A}"
 format-volume-prefix-padding = 1
 format-volume-prefix-background = ${colors.fg-alt}
 
 ;format-muted-padding = 1
 
-format-muted-prefix = ""
+format-muted-prefix = "%{A3:pavucontrol &:}%{A}"
 format-muted-prefix-padding = 1
 format-muted-prefix-background = ${colors.fg-alt}
 
@@ -298,14 +298,14 @@ type = internal/mpd
 host = 127.0.0.1
 port = 6600
 
-format-online = "<toggle> <label-song> "
+format-online = "<toggle> %{A1:bash -c '~/.ncmpcpp/notify' &:}<label-song>%{A} "
 
-icon-play = ""
+icon-play = "%{A3:bash -c '~/.config/rofi/scripts/mpdmenu.sh' &:}%{A}"
 icon-play-padding = 1
 icon-play-foreground = ${colors.fg-alt}
 icon-play-background = ${colors.accent}
 
-icon-pause = ""
+icon-pause = "%{A3:bash -c '~/.config/rofi/scripts/mpdmenu.sh' &:}%{A}"
 icon-pause-padding = 1
 icon-pause-foreground = ${colors.fg-alt}
 icon-pause-background = ${colors.accent}
@@ -361,8 +361,8 @@ format-padding = 1
 format-prefix = ""
 format-prefix-foreground = ${colors.i3-accent-alt}
 
-click-left = bash -c '~/.config/rofi/scripts/appsmenu.sh'
-click-right = bash -c '~/.config/rofi/scripts/powermenu.sh'
+click-left = bash -c '~/.config/rofi/scripts/appsmenu.sh' &
+click-right = bash -c '~/.config/rofi/scripts/powermenu.sh' &
 
 [module/i3]
 type = internal/i3
@@ -507,7 +507,7 @@ interface = wlan0
 format-connected = "<label-connected>"
 ;format-connected-padding = 1
 
-format-connected-suffix = "%{A1:networkmanager_dmenu:}%{A}"
+format-connected-suffix = "%{A1:networkmanager_dmenu &:}%{A}"
 format-connected-suffix-padding = 1
 format-connected-suffix-foreground = ${colors.fg-alt}
 format-connected-suffix-background = ${colors.i3-accent}
@@ -515,7 +515,7 @@ format-connected-suffix-background = ${colors.i3-accent}
 format-disconnected = "<label-disconnected>"
 ;format-disconnected-padding = 1
 
-format-disconnected-suffix = "%{A1:networkmanager_dmenu:}%{A}"
+format-disconnected-suffix = "%{A1:networkmanager_dmenu &:}%{A}"
 format-disconnected-suffix-padding = 1
 format-disconnected-suffix-foreground = ${colors.fg-alt}
 format-disconnected-suffix-background = ${colors.i3-accent}
@@ -568,16 +568,16 @@ label-full-background = ${colors.fg-alt}
 
 [module/i3-vol]
 type = internal/alsa
-format-volume = "<bar-volume>"
+format-volume = "%{A1:bash -c '~/.scripts/get-volume' &:}<bar-volume>%{A}"
 ;format-volume-padding = 1
 
-format-volume-prefix = ""
+format-volume-prefix = "%{A3:pavucontrol &:}%{A}"
 format-volume-prefix-padding = 1
 format-volume-prefix-background = ${colors.fg-alt}
 
 ;format-muted-padding = 1
 
-format-muted-prefix = ""
+format-muted-prefix = "%{A3:pavucontrol &:}%{A}"
 format-muted-prefix-padding = 1
 format-muted-prefix-background = ${colors.fg-alt}
 
@@ -605,14 +605,14 @@ type = internal/mpd
 host = 127.0.0.1
 port = 6600
 
-format-online = "<toggle> <label-song> "
+format-online = "<toggle> %{A1:bash -c '~/.ncmpcpp/notify' &:}<label-song>%{A} "
 
-icon-play = ""
+icon-play = "%{A3:bash -c '~/.config/rofi/scripts/mpdmenu.sh' &:}%{A}"
 icon-play-padding = 1
 icon-play-foreground = ${colors.fg-alt}
 icon-play-background = ${colors.i3-accent}
 
-icon-pause = ""
+icon-pause = "%{A3:bash -c '~/.config/rofi/scripts/mpdmenu.sh' &:}%{A}"
 icon-pause-padding = 1
 icon-pause-foreground = ${colors.fg-alt}
 icon-pause-background = ${colors.i3-accent}

@@ -1,0 +1,4 @@
+#!/bin/bash
+
+# Get Volume/Muted using pamixer
+notify-send -u low -i audio-speakers "Sound Volume" "On Level `pamixer --get-volume-human`"

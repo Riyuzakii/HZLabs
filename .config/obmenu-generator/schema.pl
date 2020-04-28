@@ -69,7 +69,7 @@ our $SCHEMA = [
     # Screenshot Menu
     {beg  => ["Screenshot", "deepin-screenshot"]},
     {item => ["scrot -e 'mv $f ~/Pictures/'", "Shot now", "deepin-screenshot"]},
-    {item => ["bash -c '~/.scripts/shotify'", "Shot in 5s", "deepin-screenshot"]},
+    {item => ["bash -c '~/.scripts/shotify'", "Shot in 5s with notify", "deepin-screenshot"]},
     {item => ["scrot -s -e 'mv $f ~/Pictures/'", "Select window or draw", "deepin-screenshot"]},
     {end  => undef},
     

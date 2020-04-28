@@ -12,7 +12,7 @@ SLiM | Rofi Menu
 ![SLiM](https://raw.githubusercontent.com/owl4ce/HZLabs/master/%40assets/preview-slim.jpg) | ![Rofi](https://raw.githubusercontent.com/owl4ce/HZLabs/master/%40assets/preview-rofi.gif)
 
 - Icons Theme           : [Papirus](https://github.com/PapirusDevelopmentTeam/papirus-icon-theme)
-- Openbox Theme         : [MIxQ](https://github.com/owl4ce/MIxQ-Openbox)
+- Openbox Theme         : [MIxQ](https://github.com/owl4ce/Yet-Another-OBT)
 - GTK Theme             : [Adapta](https://github.com/adapta-project/adapta-gtk-theme)
 - QT Theme              : [GTK using _qt5ct_](https://wiki.archlinux.org/index.php/Qt#GTK_and_Qt)
 - Fonts                 : [Comfortaa, iosevka, mplus, nerd (hurmit, mplus, roboto), material mix](https://github.com/owl4ce/HZLabs/tree/master/.fonts)
@@ -23,6 +23,7 @@ SLiM | Rofi Menu
 ## Environment Details
 | Items                | Values                                                                                               |
 |----------------------|------------------------------------------------------------------------------------------------------|
+| Resolution           | 1366x768 (96 dpi)                                                                                    |
 | Display Server       | Xorg                                                                                                 |
 | Display Manager      | [SLiM](https://wiki.archlinux.org/index.php/SLiM) (with .xinitrc for change window manager)          |
 | Window Manager       | Openbox, i3-gaps (fork of i3 with more features)                                                     |
