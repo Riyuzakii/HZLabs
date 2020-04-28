@@ -85,7 +85,7 @@ SLiM | Rofi Menu
 - [fikriomar16](https://github.com/fikriomar16)
 - [reorr](https://github.com/reorr)
 - [adi1090x](https://github.com/adi1090x)
-- [elenapan]https://github.com/elenapan/dotfiles
+- [elenapan](https://github.com/elenapan/dotfiles)
 - Our local linux community [Linuxer Desktop Art](https://web.facebook.com/groups/linuxart) & [r/unixporn](https://www.reddit.com/r/unixporn/)
 - Some people in the forum who provide solutions
 
