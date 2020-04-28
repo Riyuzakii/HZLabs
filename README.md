@@ -79,14 +79,14 @@ SLiM | Rofi Menu
 - I hope you understand about everything here. :wink:
 
 ## Thanks to
-> Because they have shared their knowledge by explaining and sharing creative-inspirational desktop
+> Because they have shared their knowledge by explaining and sharing creative desktop
 - [addy-dclxvi](https://github.com/addy-dclxvi)
 - [bandithijo](https://github.com/bandithijo)
 - [fikriomar16](https://github.com/fikriomar16)
 - [reorr](https://github.com/reorr)
+- [elenapan](https://github.com/elenapan)
 - [adi1090x](https://github.com/adi1090x)
-- [elenapan](https://github.com/elenapan/dotfiles)
-- Our local linux community [Linuxer Desktop Art](https://web.facebook.com/groups/linuxart) & [r/unixporn](https://www.reddit.com/r/unixporn/)
+- Our local linux community [Linuxer Desktop Art](https://web.facebook.com/groups/linuxart) and [r/unixporn](https://www.reddit.com/r/unixporn/)
 - Some people in the forum who provide solutions
 
 ## License
